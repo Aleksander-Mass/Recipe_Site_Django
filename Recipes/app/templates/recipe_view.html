@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+ <ul class="recipe__widget">
+     <h3 class="recipe__title">
+            {{ recipe.title }}
+     </h3>
+     <p>{{recipe.description}}</p>
+     <img src="{{recipe.image.url}}" style="width:70%; height:auto;">
+     <p>{{recipe.cooking_steps}}</p>
+     <p class="recipe__text">
+        <span class="time"></span>
+        {{ recipe.cooking_time }} мин.
+     </p>
+</ul>
+{% endblock content %}

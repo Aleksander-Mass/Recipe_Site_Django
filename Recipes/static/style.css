@@ -1,0 +1,53 @@
+html {
+  height: 100%;
+}
+
+body {
+    background-color: white;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.foodplan_green {
+    color: #91B93E;
+}
+
+.foodplan__border_green {
+    border-color: #91B93E;
+}
+
+.foodplan__shadow {
+    border: none;
+    box-shadow: 0 0 18px rgb(0 0 0 / 10%);
+}
+
+.foodplan__head_desc {
+    backdrop-filter: saturate(180%) blur(5px);
+    background-color: rgba(255, 255, 255, 0.72);
+}
+
+.navbar__opacity {
+    backdrop-filter: saturate(180%) blur(20px);
+    background-color: rgba(255, 255, 255, 0.72);
+    border-bottom: 1px solid lightgray;
+}
+
+.nav-item__border {
+    position: relative;
+}
+
+input {
+    margin: 0;
+    line-height: normal;
+    font-family: inherit;
+    font-size: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+.btn-outline-success {
+    margin: 50px;
+    margin-left: 50px;
+}

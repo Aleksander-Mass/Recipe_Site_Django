@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+    <main style="margin-top: calc(2rem + 85px);">
+        <section>
+            <div class="container">
+                <div class="card px-5 py-3 d-flex align-items-center foodplan__shadow">
+                    <form method="POST">
+                        <h1 class="mb-4 text-center"><strong>Вход</strong></h1>
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="exampleInputUsername" class="form-label">Имя
+                            <input type=username" name="username" class="form-control" id="id_username">
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <label for="exampleInputPassword1" class="form-label">Пароль</label>
+                            </div>
+                            <input type="password" name="password" class="form-control" id="id_password">
+                        </div>
+                        <div class="alert alert-warning" role="alert">{{ error }}</div>
+                        <div class="row mb-3">
+                            <div class="col-12 col-sm-6 mt-3">
+                                <button type="submit"
+                                    class="btn w-100 btn-outline-success foodplan_green foodplan__border_green">Войти</button>
+                            </div>
+                            <div class="col-12 col-sm-6 mt-3 d-flex justify-content-center align-items-center">
+                                <h6>Нет аккаунта? <a href="{% url 'register' %}" class="link-dark foodplan_green">Зарегистрируйтесь</a></h6>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock content %}
